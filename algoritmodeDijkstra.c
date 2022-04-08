@@ -36,7 +36,7 @@ void  dijkstra(int origem, int destino) {
 
     do {
         custo = INT_MAX;
-        for(int i = 0; i < 10; i++) {
+        for(int i = origem+1; i < 10; i++) {
             if(graph[origem][i] < custo) {
                 custo = graph[origem][i];
                 v = i;
