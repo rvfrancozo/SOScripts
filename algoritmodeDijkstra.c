@@ -32,8 +32,6 @@ void initGraph() {
 void  dijkstra(int origem, int destino) {
     int custoTotal = 0;
     int custo,v;
-    int count = 0;
-    char path[] = "";
     printf("O melhor caminho de %d para %d é:\n %d-",origem,destino,origem);
 
     do {
