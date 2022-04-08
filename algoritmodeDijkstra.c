@@ -32,11 +32,12 @@ void initGraph() {
 void  dijkstra(int origem, int destino) {
     int custoTotal = 0;
     int custo,v;
-    printf("O melhor caminho de %d para %d é:\n %d-",origem,destino,origem);
+    printf("O melhor caminho de %d para %d é:\n %d",origem,destino,origem);
 
     do {
+        printf("-");
         custo = INT_MAX;
-        for(int i = origem+1; i < 10; i++) {
+        for(int i = origem+1; i < VERTEX; i++) {
             if(graph[origem][i] < custo) {
                 custo = graph[origem][i];
                 v = i;
@@ -44,7 +45,7 @@ void  dijkstra(int origem, int destino) {
         }
         origem = v;
         custoTotal += custo;
-        printf("%d-", origem);
+        printf("%d", origem);
     } while(origem < destino);
 
     printf("\nCom custo de %d:\n\n",custoTotal);
