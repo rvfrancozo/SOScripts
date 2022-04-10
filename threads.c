@@ -3,7 +3,7 @@ Exemplo de Threads em C código testado no KDE Neon com VS Code
 Para compilar faça gcc -pthread threads.c -o threads.o ; ./threads.o
 */
 #include <stdio.h>
-#include <pthread.h>
+#include <pthread.h> //biblioteca de threads
 
 #define THREADS 6
 
