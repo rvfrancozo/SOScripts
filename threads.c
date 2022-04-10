@@ -12,12 +12,12 @@ int v[THREADS];
 void * funcao(void * a) {
     int *valor = (int*)(a);
     if(*valor == 1) {
-        printf("Thread 1 executando...\n");
+        printf("Thread %d executando...\n",pthread_self());
         for(int i = 0; i < THREADS/2; i++) {
             v[i] = 0;
         }
     } else {
-        printf("Thread 2 executando...\n");
+        printf("Thread %d executando...\n",pthread_self());
         for(int i = THREADS/2; i < THREADS;i++) {
             v[i] = 1;
         }
