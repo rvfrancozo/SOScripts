@@ -2,3 +2,4 @@ algoritmodeDijkstra
 temporarios
 temporarios.c
 temporarios.o
+threads.o
