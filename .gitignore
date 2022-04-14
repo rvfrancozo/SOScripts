@@ -3,3 +3,8 @@ temporarios
 temporarios.c
 temporarios.o
 threads.o
+corrida_threads.o
+mutex.o
+.gitignore
+corrida_sem_mutex.o
+hillhash

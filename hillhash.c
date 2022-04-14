@@ -25,6 +25,7 @@ const char* cifra(char mensagem[255]) {
         for(int j = 0; j < strlen(alfabeto); j++) {
             if(mensagem[i] == alfabeto[j]) {
                 msgcode[i] = j;
+                printf(" %d ",j);
                 break;
             }
         }
@@ -40,6 +41,7 @@ const char* cifra(char mensagem[255]) {
     char result[strlen(mensagem)];
     for(int i = 0; i < strlen(mensagem); i++) {
         //printf("%c",alfabeto[msgcifrada[i]]);
+        printf(" %d-",msgcifrada[i]);
         result[i] = alfabeto[msgcifrada[i]];
     }
     char *saida;
@@ -117,6 +119,7 @@ const char* decifra(char mensagem[255]) {
 }
 
 int main() {
+    printf("%d", 554%26);
     char mensagem[255];
 
     puts("Informe a  mensagem que deseja encriptar: ");
