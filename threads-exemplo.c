@@ -11,11 +11,10 @@ void bs()
     srand(time(0));
     for (int i = 0; i < SIZE; i++)
     {
-
         dados[i] = rand() % SIZE;
     }
 
-    printf("Sua solicitação está sendo processada... ");
+    //printf("Sua solicitação está sendo processada... ");
 
     for (int i = 1; i < SIZE; i++)
     {
@@ -29,7 +28,7 @@ void bs()
             }
         }
     }
-    printf("\nsolicitação concluída...");
+    //printf("\nsolicitação concluída...");
 }
 
 void *mensagem1(void *a)

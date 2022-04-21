@@ -8,3 +8,4 @@ mutex.o
 .gitignore
 corrida_sem_mutex.o
 hillhash
+threads-exemplo.o

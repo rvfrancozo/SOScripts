@@ -14,13 +14,14 @@ void *funcao1(void *a)
 
     for (int i = 0; i < SIZE; ++i)
     {
-        int tmp = *valor;
-        tmp++;
-        printf("Thread 1 id : %d, valor %d\n", pthread_self(), *valor);
+        //int tmp = *valor;
+        //tmp++;
+        printf("Thread 1 id : %d, valor \n", pthread_self()) ;
+        
 
         //::Sleep( rand() % 1500 ); usar no windows
         usleep(rand() % (500 * 1000));
-        *valor = tmp;
+        //*valor = tmp;
     }
 
     pthread_exit(0);
@@ -33,13 +34,13 @@ void *funcao2(void *a)
 
     for (int i = 0; i < SIZE; ++i)
     {
-        int tmp = *valor;
-        tmp++;
-        printf("Thread 2 id : %d, valor %d\n", pthread_self(), *valor);
+        //int tmp = *valor;
+        //tmp++;
+        printf("Thread 2 id : %d, valor \n", pthread_self());
 
         //::Sleep( rand() % 1500 ); windows
         usleep(rand() % (500 * 1000));
-        *valor = tmp;
+        //*valor = tmp;
     }
 
     pthread_exit(0);
