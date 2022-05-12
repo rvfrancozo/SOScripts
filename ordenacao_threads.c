@@ -22,7 +22,7 @@ void *thread_bs(void *a)
 {
     for (int i = 1; i < SIZE; i++)
     {
-        printf("Thread %d ID: %d executando... SS\n",a,pthread_self());
+        printf("Thread %d ID: %d executando... BS\n",a,pthread_self());
         for (int j = SIZE - 1; j >= i; j--)
         {
             if (dados[j - 1] > dados[j])
