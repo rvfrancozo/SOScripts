@@ -10,4 +10,5 @@ corrida_sem_mutex.o
 hillhash
 threads-exemplo.o
 one_max.o
+array_threads.o
 .Rhistory
