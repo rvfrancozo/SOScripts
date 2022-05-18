@@ -9,7 +9,7 @@ pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
 
 void * funcao1(void * a) {
 	int valor = *(int*)a; //valor recebe o valor de a
-	int * pointer = (int*)a; //pointer é um ponteiro que recebe o end de a
+	int * pointer = (int*)a; //pointer um ponteiro que recebe o end de a
 	int i;
 	for(i = 0; i < SIZE; i++) {
 		pthread_mutex_lock(&mutex);
@@ -26,7 +26,7 @@ void * funcao1(void * a) {
 
 void * funcao2(void * a) {
 	int valor = *(int*)a; //valor recebe o valor de a
-	int * pointer = (int*)a; //pointer é um ponteiro que recebe o end de a
+	int * pointer = (int*)a; //pointer ï¿½ um ponteiro que recebe o end de a
 	int i;
 	for(i = 0; i < SIZE; i++) {
 		pthread_mutex_lock(&mutex);

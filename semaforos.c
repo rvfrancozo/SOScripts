@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <time.h>
+#include <windows.h>
 #include <pthread.h>
 #include <semaphore.h>
 
@@ -10,11 +11,11 @@ int temp = 0;
 
 void *observador(void *a)
 {
-    while (1)
+    do
     {
         printf("Observador esperando...\n");
         sem_wait(&s0);
-        usleep(100000);
+        usleep(500000);
 
         temp = rand() % 100;
 
@@ -33,7 +34,7 @@ void *observador(void *a)
             printf("Semaforo 1 e 2 VERMELHO\n");
             sem_post(&s0);
         }
-    }
+    } while(1);
     pthread_exit(0);
 }
 
@@ -41,7 +42,7 @@ void *funcao1(void *a)
 {
     int timer = 5;
     int *valor = (int *)a;
-    while (1)
+    do
     {
         int tmp = *valor;
         printf("Semaforo 1 Vermelho = %d\n", ++tmp);
@@ -56,8 +57,8 @@ void *funcao1(void *a)
         }
         *valor = tmp;
         sem_post(&s0);
-        printf("Semaforo 1 VERDE\n");
-    }
+        //printf("Semaforo 1 VERDE\n");
+    } while(1);
     pthread_exit(0);
 }
 
@@ -80,7 +81,7 @@ void *funcao2(void *a)
         }
         *valor = tmp;
         sem_post(&s0);
-        printf("Semaforo 2 VERDE\n");
+        //printf("Semaforo 2 VERDE\n");
     }
     pthread_exit(0);
 }
