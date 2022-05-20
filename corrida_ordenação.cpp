@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <pthread.h>
 
 #define SIZE 100
 
@@ -33,7 +34,7 @@ void *thread_ss(void *a)
         int gap = k;
         for (int i = gap; i < SIZE; i++)
         {
-            tmp = dados[i];
+            int tmp = dados[i];
             for (j = i - gap; tmp < dados[j] && j >= 0; j = j - gap)
                 dados[j + gap] = dados[j];
             dados[j + gap] = tmp;
