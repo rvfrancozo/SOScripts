@@ -61,7 +61,13 @@ void *thread_ss(void *a)
 int main()
 {
     init();
-
+    
+    bool b = (rand()%2 == 0) ? false : true;
+    
+    printf( (rand()%2 == 0) ? "Fabio" : "Jhonathan" );
+    
+	printf("%d",b);
+    
     pthread_t thread1, thread2;
 
     pthread_create(&thread1, NULL, thread_bs, NULL);

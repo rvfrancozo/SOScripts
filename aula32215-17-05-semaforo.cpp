@@ -67,6 +67,7 @@ void * funcao2(void * a) {
 }
 //função main principal
 int main() {
+	srand(time(0));
 	pthread_t thread[3];//crio um array de threads com 3 posições
 	
 	int dado = 0;//cria e inicializa um inteiro dado com valor 0
